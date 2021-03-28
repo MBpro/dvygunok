@@ -5,13 +5,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Двигунок</title>
-    <link rel="preload" href="fonts/Roboto-Regular.ttf" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Roboto-Bold.ttf" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <script src="./js/script.min.js"></script>
+    <header class="main-header">
+        <div class="logo">
+            <img src="../img/logo.svg" alt="" width="220" height="48">
+        </div>
+        <nav class="main-header__nav">
+            <div class="main-header__wrap">
+                <ul class="menu-list">
+                    <li class="menu-list__item"><a href="#" class="menu-list__link">О продукте</a></li>
+                    <li class="menu-list__item"><a href="#" class="menu-list__link">Инструкция</a></li>
+                    <li class="menu-list__item"><a href="#" class="menu-list__link">Отзывы</a></li>
+                    <li class="menu-list__item"><a href="#" class="menu-list__link">Делимся опытом</a></li>
+                    <li class="menu-list__item"><a href="#" class="menu-list__link">Задать вопрос</a></li>
+                </ul>
+                <ul class="social-list">
+                    <li class="social-list__item"><img class="social-list__img" src="" alt=""></li>
+                    <li class="social-list__item"><img class="social-list__img" src="" alt=""></li>
+                    <li class="social-list__item"><img class="social-list__img" src="" alt=""></li>
+                </ul>
+                <div class="burger">
+                    <button class="burger__button"></button>
+                </div>
+            </div>
+        </nav>
+        <div class="main-header__icon">
+            <img class="main-header__icon main-header__icon--delivery" src="" alt="">
+            <img class="main-header__icon main-header__icon--phone" src="" alt="">
+        </div>
+        <div class="burger">
+            <button class="burger__button"></button>
+        </div>
+    </header>
+
+    <main class="main">
+        <h1>Тестер герметичности ГБЦ</h1>
+        <div>
+            <div>
+                <img src="../img/main320@1x.jpg" alt="">
+            </div>
+            <p class="main__text">Простой и надёжный способ ,позволяет за короткое время с точностью 99,9% самостоятельно выявить повреждения прокладки ГБЦ, головки цилиндров или блока цилиндров,а в случае отсутствия повреждений сэкономить время и  деньги на  не нужном дорогостоящим  ремонте. Данный метод  зарекомендовал себя как незаменимый  вовремя предпокупочной диагностики автомобиля</p>
+            <div>
+                <div>
+                    <span>Цена:<span>175</span>ГРН</span>
+                    <a href="">Купить</a>
+                </div>
+                <div>
+                    <p>* После нажатия кнопки купить появится возможность указать    нужное количество товара, выбрать способ оплаты и доставки.</p>
+                    <p>Доставка: “Новая почта” и “Укрпочта”.</p>
+                    <p>Оплата: При покупке(Visa,Mastercard-LiqPay)</p>
+                    <p>Наложеный платеж: Новая почта, Укрпочта.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <h2 class="product__title">О продукте</h2>
+            <p class="product__content">Тестер герметичности ГБЦ применяется на дизельных и бензиновых двигателях, а также на двигателях с установленным ГБО. Идущая в комплекте синяя жидкость вступает в реакцию с CO2 который в случае повреждений прокладки или головки ГБЦ содержится в выхлопных газах и попадает из камер сгораний в систему охлаждения (В исправном двигателе в системе охлаждения CO2 отсутствует.) Изменения цвета жидкости из синего на зеленый или жёлтый свидетельствует о повреждении герметичности ГБЦ .</p>
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                      <img src="../img/product_blue320@2x.png" alt=""  width="300" height="398">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../img/product_green320@2x.png" alt=""  width="300" height="398">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../img/product_yellow320@2x.png" alt=""  width="300" height="398">
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+        </div>
+
+        <article class="instruction">
+            <h2 class="instruction__title">Инструкция</h2>
+            <ol class="instruction__list">
+                <li class="instruction__item">
+                    <p class="instruction__text">В холодное время года нагреть двигатель до 30°- 40° градусов после чего двигатель заглушить. В теплое время перейти к пункту 2.
+                    </p>
+                </li>
+                <li class="instruction__item">
+                    <p class="instruction__text">Соединить пластиковую трубку с резиновой пробкой.</p>
+                </li>
+                <li class="instruction__item">
+                    <p class="instruction__text">Налить в трубку жидкость до уровня, где начинаются камеры, примерно 2 мл как показано на рисунке ниже</p>
+                </li>
+                <li class="instruction__item">
+                    <p class="instruction__text">Открыть расширительный бачок или радиатор в зависимости от конструкции системы охлаждения и установить тестер как показано на рисунке</p>
+                </li>
+                <li class="instruction__item">
+                    <p class="instruction__text">Запустить двигатель, тест проводить на холостом ходу.</p>
+                </li>
+                <li class="instruction__item">
+                    <p class="instruction__text">Во время работы двигателя через тестер должны выходить пузырьки воздуха. Изменения цвета жидкости из синего на зеленый или жёлтый свидетельствует о пробои прокладки ГБЦ или повреждении головки блока цилиндров</p>
+                </li>
+            </ol>
+            <ul class="instruction__list-img">
+                <li class="instruction__item-img">
+                    <img class="instruction__img" src="../img/test_instruction1 2@1x.jpg" alt="" width="300" height="300">
+                </li>
+                <li class="instruction__item-img">
+                    <img class="instruction__img" src="../img/test_instruction1 2@1x.jpg" alt="" width="300" height="300">
+                </li>
+            </ul>
+            <section class="instruction__attention">
+                <h3 class="instruction__title">Внимание!</h3>
+                <p class="instruction__text">Не открывать крышку расширительного бачка или радиатора при достижении двигателя рабочей температуры так как при снятии крышки в системе охлаждения понижается давление и соответственно уменьшается температура кипения это может привести к моментальному закипанию охлаждающей жидкости которая увеличится в объеме и выйдет из бачка или радиатора, что чревато серьезными ожогами лица и рук.</p>
+                <p class="instruction__text">Не допускать смешивание охлаждающей жидкости с жидкостью для теста. При смешивании жидкостей тест может показать ложный результат.</p>
+                <section class="instruction__attention">
+                    <h4 class="instruction__title">Если смешивание жидкостей произошло:</h4>
+                        <ol class="instruction__list">
+                            <li class="instruction__item">
+                                <p class="instruction__text">Вылить жидкость из пластиковой трубки</p>
+                            </li>
+                            <li class="instruction__item">
+                                <p class="instruction__text">Промыть пластиковую трубку водой и высушить</p>
+                            </li>
+                            <li class="instruction__item">
+                                <p class="instruction__text">Провести тест заново</p>
+                            </li>
+                        </ol>
+                </section>
+            </section>
+        </article>
+
+        <article class="comment">
+            <h2 class="comment__title">Отзывы</h2>
+            <div class="comment__block">
+                <span class="comment__name">Cергей</span><span class="comment__data">21.02.2021</span>
+                <p class="comment__text">Дешевый и эффективный метод  для проверки ГБЦ. Уберег меня от замены прокладки за 7000 грн,  несмотря на диагноз двух механиков </p>
+                <a class="comment__link" href="#">Ответить</a>
+            </div>
+            <div class="comment__block">
+                <span class="comment__name">Cергей</span><span class="comment__data">21.02.2021</span>
+                <p class="comment__text">Дешевый и эффективный метод  для проверки ГБЦ. Уберег меня от замены прокладки за 7000 грн,  несмотря на диагноз двух механиков </p>
+                <a class="comment__link" href="#">Ответить</a>
+            </div>
+            <div class="comment__block">
+                <span class="comment__name">Cергей</span><span class="comment__data">21.02.2021</span>
+                <p class="comment__text">Дешевый и эффективный метод  для проверки ГБЦ. Уберег меня от замены прокладки за 7000 грн,  несмотря на диагноз двух механиков </p>
+                <a class="comment__link" href="#">Ответить</a>
+            </div>
+            <div class="comment__block">
+                <span class="comment__name">Cергей</span><span class="comment__data">21.02.2021</span>
+                <p class="comment__text">Дешевый и эффективный метод  для проверки ГБЦ. Уберег меня от замены прокладки за 7000 грн,  несмотря на диагноз двух механиков </p>
+                <a class="comment__link" href="#">Ответить</a>
+            </div>
+            <div class="comment__block">
+                <span class="comment__name">Cергей</span><span class="comment__data">21.02.2021</span>
+                <p class="comment__text">Дешевый и эффективный метод  для проверки ГБЦ. Уберег меня от замены прокладки за 7000 грн,  несмотря на диагноз двух механиков </p>
+                <a class="comment__link" href="#">Ответить</a>
+            </div>
+                <form class="comment__form" action="">
+                    <legend class="comment__legend">Написать комментарий</legend>
+                    <textarea class="comment__textarea" name="" id="" cols="30" rows="10"></textarea>
+                </form>
+                <button class="button" type="submit">Отправить</button>
+            </div>
+        </article>
+
+        <div class="experience">
+            <h2 class="experience__title">Делимся опытом</h2>
+            <article class="experience__article">
+                <h3 class="experience__article">Проверка ГБЦ на Skoda Fabia 1.4 mpi MK1</h3>
+                <ul class="experience__list">
+                    <li class="experience__item"><img class="experience__img" src="../img/test1@1x.png" alt="" width="300" height="300"></li>
+                    <li class="experience__item"><img class="experience__img" src="../img/test2@1x.png" alt="" width="300" height="300"></li>
+                </ul>
+                <p class="experience__content">Хочу поделиться своей историей по использованию данного "девайса" может кому-то, пригодится. В моем владении авто Skoda Fabia 2001 года выпуска, двигатель AME бензин 1,4 MPI с установкой ГБО это тот двигатель на котором гильзы цилиндров съемные ну да ладно история не об этом. Зимним январским утром усевшись в свою старую рабочую лошадку и завел двигатель, раздался пронзающий писк после которого я второй раз проснулся, на приборе светился красным датчик уровня жидкости. Открывши капот обнаружил что в расширительном бачке не хватает охлаждающей жидкости примерно пол сантиметра до минимальной черты уровня жидкости. Недолго думая я долил тосол, благо в багажнике была запечатанная пяти литровая канистра так как собирался заменить его еще до начала зимы, но все как то не получалось, видать не судьба. Убедившись что датчик перестал светиться, я поехал, по дороге раздумывая куда могла уйти жидкость и вдруг вспомнил что летом в августе примерно пол года назад у меня был такой же случай. Поспрашивавши в знакомых шкодоводов и почитав форумы на тему доливают ли они жидкость и как часто получил позитивный ответ что доливают и еще примерно стем же периодом что и у меня, вздохнувши легко я продолжил заниматься своими делами. На следующие утро к сожалению все повторилось, снова пронзающий писк датчика температуры, снова открываю капот, смотрю на бачок, но к моему удивлению уровень в норме, откручиваю крышку бачка и вдруг обнаруживаю там маслянистое пятно, присмотревшись еще замечаю немного эмульсии, да-да, той самой зловещей которая говорит о пробитой прокладки ГБЦ или того лучше трещин головки блока цилиндров ну или уже для полного спокойствия трещина самого блока цилиндров. Долго не раздумывая решаю что буду ездить и посмотрю, будет ли гнать масло в бачок, да знаю последствия эксплуатации авто с пробитой прокладкой, но решив что на дворе зима до такого не дойдет. За две недели проехал 700 км, масло в бачок не гонит, уровень жидкости без изменений, датчик все так же срабатывает, но вот странность если авто заглушить и завести снова датчик гаснет, патрубки не дует, печка работает, масло чистое без эмульсии, уровень масла в норме. Появилась надежда, что это масляный радиатор или, как его еще называют охладитель масла. Почитав форумы я наткнулся на комментарий, что можно легко проверить ГБЦ с помощью этого теста, недолго думая заказал. И вот спустя день тест ГБЦ у меня, бегу к машине запускаю двигатель далее, делаю все согласно инструкции, тест в расширительном бачке, жду. Проходит одна минута, вторая минута, седьмая минута, жидкость не меняет цвет и тут я начинаю злиться и даю газу, держу на 2000 об/мин и жидкость начинает вылетать из бачка через трубку тестера. Всего вышло примерно 200-300 мл жидкости, но доливать не стал, делаю все сначала как в инструкции, жду, спустя 10 минут синяя жидкость меняет цвет в сторону зеленого хотя правильно сказать становится едва зеленой ну или сине-зеленой, что принципе можно посмотреть на фото. Жду еще немного, жидкость больше не меняет цвет. Снова странная ситуация, ведь жидкость должна быть зелена или желтая ну, или синяя, а у меня не понятная, немного подумал начал искать информацию по этой жидкости
+                 И вот к чему пришел:
+                Жидкость меняет цвет в зависимости от количества СO2, чем его больше, тем жидкость будет меняться в сторону желтого проходя путь от синего(начального состояния) к зеленому и от зеленого к желтому. В моем случае цвет начал изменятся в сторону зеленого и остановился на этом цвете потому что содержание CO2 в расширительном бачке если так можно выразится было минимально, не буду расписывать подробно кому интересно больше узнать по этой теме рекомендую освежить память по химии школьной программы.
+                Итог:
+                После снятия головки, механик подтвердил диагноз прогара прокладки ГБЦ в первом цилиндре, повреждение было едва заметно, наверное по этой причине и не было выразительных симптомов разгерметизации ГБЦ и жидкость едва изменила цвет. От себя могу порекомендовать перед тем как делать тест откачать немного охлаждающей жидкости из расширительного бачка, примерно 200-300 мл думаю вполне хватит, а так же перекрыть обратку в расширительном бачке так как есть подозрение что часть CO2 может уходить через нее и тест может быть менее точным, это пришло в голову уже после того как сделал тест, так что точно утверждать не буду. Что касается датчика
+                уровня жидкости ругался он еще даже после замены прокладки ГБЦ и перестал только после того, как его тщательно вымыл. </p>
+            </article>
+        </div>
+
+        <div class="question">
+            <form class="question__form" action="" id="name">
+            <legend class="question__title">Задать вопрос</legend>
+                <div>
+                    <label class="question__title" for="">Имя *</label>
+                    <input class="question__input" type="text" name="" id="">
+                </div>
+                <div>
+                    <label class="question__title" for="">Email *</label>
+                    <input class="question__input" type="text" name="" id="">
+                </div>
+                <div>
+                    <label class="question__title" for="">Тема</label>
+                    <input class="question__input" type="text" name="" id="">
+                </div>
+                <div>
+                    <label class="question__title" for="">Сообщение *</label>
+                    <textarea class="question__textarea" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+            <button class="button" type="submit" form="name">Отправить</button>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+        <ul class="menu-list">
+            <li class="menu-list__item"><a href="#" class="menu-list__link">О продукте</a></li>
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Инструкция</a></li>
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Отзывы</a></li>
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Делимся опытом</a></li>
+            <li class="menu-list__item"><a href="#" class="menu-list__link">Задать вопрос</a></li>
+        </ul>
+        <ul class="social-list">
+            <li class="social-list__item"><img class="social-list__img" src="" alt=""></li>
+            <li class="social-list__item"><img class="social-list__img" src="" alt=""></li>
+            <li class="social-list__item"><img class="social-list__img" src="" alt=""></li>
+        </ul>
+        <p class="main-footer__text">COPYRIGHT © 2020 Двигунок</p>
+    </footer>
+    <script src="../js/script.min.js"></script>
 </body>
 
 </html>
