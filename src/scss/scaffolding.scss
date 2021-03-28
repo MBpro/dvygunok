@@ -17,14 +17,14 @@ html{
 
 
 body{
-    //display: flex;
-    //flex-direction: column;
+   display: flex;
+   flex-direction: column;
    min-width: 320px;
    min-height:100%;
    font-family: "Roboto", "Arial", sans-serif;
-   font-size: 18px;
+   font-size: 1.8rem;
    font-style: normal;
-   line-height: 24px;
+   line-height: 2.4rem;
    color: #20343E;  
 }
 
