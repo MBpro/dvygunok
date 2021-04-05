@@ -1,0 +1,115 @@
+
+/*=================== START STYLE ONLY MOBLILE =====================*/
+
+@media(max-width:$mobile-width-only){
+    .burger--open{
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+    }
+
+    .burger__button{
+        position: relative;
+        display: block;
+        width: 3rem;
+        height: 2.4rem;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    
+        &::before{
+            content: "";
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 0.3rem;
+            background-color: #474747;
+            border-radius: 0.3rem;
+            transition: all 0.3s ease 0s;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left:0;
+            width: 100%;
+            height: 0.3rem;
+            background-color: #474747;
+            border-radius: 0.3rem;
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    .burger__button.js-burger__button--active{
+
+        &::before{
+            content: "";
+            top: 1.2rem;
+            margin: auto;
+            transform: rotate(45deg);
+            transition: all 0.3s ease 0s;
+        }
+
+        &::after{
+            content: "";
+            bottom: 0.9rem;
+            transform: rotate(-45deg);
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+
+    .burger__line{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: block;
+        width: 3rem;
+        height: 0.3rem;
+        margin: auto;
+        background-color: #474747;
+        border-radius: 0.3rem;
+       
+    }
+
+    .burger__line.js-burger__line--active{
+        display: none;
+    }
+
+    .burger--close{
+        display: flex;
+    }
+    
+    .burger__button--close{
+       margin: 0 1rem 0 0;
+
+        &::before{
+            top: 1.2rem;
+            transform: rotate(45deg);
+        }
+        &::after{
+            bottom: 0.9rem;
+            transform: rotate(-45deg);
+        } 
+    }
+
+    .burger__text{
+        font-size: 1.2rem;
+    }
+
+}
+/*>>>>>>>>>>>>>>>>>>>>>>>>> END <<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+.burger{
+    @media(min-width:$desktop-width-1){
+        display: none;  
+    }
+}
+
+
+
