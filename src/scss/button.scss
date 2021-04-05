@@ -1,0 +1,15 @@
+.button{
+    padding: 1.4rem 0;
+    font-weight: 700;
+    line-height: 2.1rem;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #55A5B9;
+
+    &--link{
+        display: block;
+        border-radius: 5rem;
+    }
+    
+}
