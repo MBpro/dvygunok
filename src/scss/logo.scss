@@ -1,0 +1,14 @@
+
+.logo__img{
+    display: block;
+
+    @media(min-width:$tablet-width){
+        width: 25.5rem;
+        height: 5.5rem;
+    }
+
+    @media(min-width:$desktop-width-3){
+        width: 35rem;
+        height: 7.5rem;
+    }
+}
