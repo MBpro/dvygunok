@@ -12,11 +12,11 @@
 
 <body>
     <header class="main-header">
-        <div class="logo">
-            <img class="logo__img" src="../img/logo.svg" alt="" width="220" height="48">
-        </div>
-        <nav class="main-header__nav">
-            <div class="main-header__wrap">
+        <div class="main-header__box">
+            <div class="logo">
+                <img class="logo__img" src="../img/logo.svg" alt="" width="220" height="48">
+            </div>
+            <nav class="main-header__nav">
                 <ul class="menu-list">
                     <li class="menu-list__item"><a href="#" class="menu-list__link">О продукте</a></li>
                     <li class="menu-list__item"><a href="#" class="menu-list__link">Инструкция</a></li>
@@ -24,25 +24,47 @@
                     <li class="menu-list__item"><a href="#" class="menu-list__link">Делимся опытом</a></li>
                     <li class="menu-list__item"><a href="#" class="menu-list__link">Задать вопрос</a></li>
                 </ul>
-                <ul class="social-list">
-                    <li class="social-list__item"><img class="social-list__img" src="" alt=""></li>
-                    <li class="social-list__item"><img class="social-list__img" src="" alt=""></li>
-                    <li class="social-list__item"><img class="social-list__img" src="" alt=""></li>
+                <ul class="social-list social-list--header">
+                    <li class="social-list__item">
+                        <a class="social-list__link" href="#" aria-label="ссылка на фейсбук">
+                            <img class="social-list__img" src="../img/facebook.svg" alt="" width="30" height="30">
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a class="social-list__link" href="#" aria-label="ссылка на вайбер">
+                            <img class="social-list__img" src="../img/viber.svg" alt="" width="30" height="30">
+                        </a>
+                    </li>
+                    <li class="social-list__item">
+                        <a class="social-list__link" href="#" aria-label="ссылка на телеграм">
+                            <img class="social-list__img" src="../img/telegram.svg" alt="" width="30" height="30">
+                        </a>
+                    </li>
                 </ul>
-                <div class="burger">
-                    <button class="burger__button"></button>
+                <div class="social-list__phone">+380 96 506 19 19</div>
+                <div class="burger burger--close">
+                    <button class="burger__button burger__button--close" id="burger-close" aria-label="Кнопка закрытия меню"></button>
+                    <span class="burger__text" >закрыть меню</span>
+                </div>
+            </nav>
+
+            <div class="main-header_wrap-icon">
+                <div class="main-header__item-icon main-header__item-icon--delivery">
+                    <img class="main-header__icon main-header__icon--delivery"  src="../img/delivery_icon.svg" alt="" width="35" height="35">
+                    <p class="main-header__text main-header__text--delivery">Доставляем:<br>Укрпочтой и Новой почтой<br>по всей територии Украины</p>
+                </div>
+                <div class="main-header__item-icon main-header__item-icon--phone">
+                    <img class="main-header__icon main-header__icon--phone" src="../img/phone_icon.svg" alt="" width="35" height="35">
+                    <p class="main-header__text main-header__text--phone">+38 096 506 19 19 </p>
                 </div>
             </div>
-        </nav>
-        <div class="main-header__icon">
-            <img class="main-header__icon main-header__icon--delivery" src="" alt="">
-            <img class="main-header__icon main-header__icon--phone" src="" alt="">
-        </div>
-        <div class="burger">
-            <button class="burger__button"></button>
+
+            <div class="burger burger--open">
+                <button class="burger__button" id="burger-open" aria-label="Кнопка открытия меню"><span class="burger__line"></span></button>
+            </div>
         </div>
     </header>
-
+ 
     <main class="main">
         <h1 class="main__title">Тестер герметичности ГБЦ</h1>
         <div class="main__content">
@@ -239,7 +261,8 @@
         </ul>
         <p class="main-footer__text">COPYRIGHT © 2020 Двигунок</p>
     </footer>
-    <script src="../js/script.min.js"></script>
+    <div class="background-mobile-menu"></div>
+    <script src="./js/script.min.js"></script>
 </body>
 
 </html>       
