@@ -1,9 +1,9 @@
 .main{
     flex: 0 1 100%;
     padding: 3rem 1rem 3.5rem 1rem;
-    
+
     @media(min-width:$mobile){
-        
+        padding: 5rem 2rem 3rem 2rem;
     }
 }
 
@@ -11,6 +11,11 @@
     padding: 3rem 1rem 3.5rem 1rem;
     margin: -3rem -1rem 0 -1rem;
     background-color: rgba($color: $main-background, $alpha: $main-background-alpha);
+
+    @media(min-width:$mobile){
+        padding: 5rem 2rem 0 2rem;
+        margin: -5rem -2rem  0 -2rem;
+    }
     
 }
 
@@ -19,6 +24,14 @@
     font-size: 2.8rem;
     line-height: 3.3rem;
     text-align: center;
+
+    @media(min-width:$mobile){
+        margin: 0 0 3rem 0;
+    }
+
+    @media(min-width:$mobile){
+        margin: 0 0 3rem 0;
+    }
 }
 
 .main__content{
@@ -29,35 +42,122 @@
 
 .main__text{
     margin: 0 0 3rem 0;
+
 }
 
 .main__img{
     margin: 0 0 2rem 0;
+
+    @media(min-width:$mobile){
+       width: 44.1rem;
+       height: 38.3rem;
+    }
+}
+
+.main__wrap-info{
+    @media(min-width:$mobile){
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
 }
 
 .main__wrap-del-and-pay{
     margin: 0 0 2.5rem 0;
+
+    @media(min-width:$mobile){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+}
+
+.main__wrap-del-and-pay br{
+    display: none;
+
+    @media(min-width:$mobile){
+      display: block;
+    }
 }
 
 .main__info-buy{
     font-size: 1.3rem;
-}
 
+    @media(min-width:$mobile){
+       flex: 1 1 100%;
+       margin: 0 0 1.2rem 0; 
+       line-height: 1.4rem;
+       //border: 1px solid red;
+    }
+}
+/******/
 .main__info-delivery{
     font-size: 1.3rem;
+
+    @media(min-width:$mobile){
+        flex: 0 1 50.1%;
+        padding: 0 0 0 1.6rem;
+        line-height: 1.4rem;
+        //border: 1px solid red;
+    }
 }
 
 .main__info-pay{
     font-size: 1.3rem;
+
+    @media(min-width:$mobile){
+        flex: 0 1 50.1%;
+        padding: 0 0 0 1.6rem;
+        line-height: 1.4rem;
+        //border: 1px solid red;
+    }
 }
 
 .main__info-method-expulsion{
     font-size: 1.3rem;
+
+    @media(min-width:$mobile){
+        flex: 0 1 50.1%;
+        padding: 0 0 0 1.6rem;
+        line-height: 1.4rem;
+        //border: 1px solid red;
+    }
+}
+/*******/
+
+.main__margin:not(:last-child){
+    @media(min-width:$mobile){
+        margin: 0 0 0.5rem 0;
+    }
+}
+
+
+.main__wrap-price{
+    @media(min-width:$mobile){
+        position: relative;
+        flex: 0 1 calc(49.9% - 1.6rem);
+        margin: -13.4rem 0 0 0; 
+        //border: 1px solid red;
+    }
+
+    &::before{
+        @media(min-width:$mobile){
+            content: "";
+            position: absolute;
+            top: 0.3rem;
+            right: -1.6rem;
+            width: 0.1rem;
+            height: 10.5rem;
+            background-color: #C4C4C4;
+        }
+    }
+
 }
 
 .main__wrap-inner{
     margin: 0 0 1.5rem 0;
     text-align: center;
+    
 }
 
 .main__text-price{
