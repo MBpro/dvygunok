@@ -1,3 +1,75 @@
 .main{
     flex: 0 1 100%;
+    padding: 3rem 1rem 3.5rem 1rem;
+    
+    @media(min-width:$mobile){
+        
+    }
+}
+
+.main__wrap{
+    padding: 3rem 1rem 3.5rem 1rem;
+    margin: -3rem -1rem 0 -1rem;
+    background-color: rgba($color: $main-background, $alpha: $main-background-alpha);
+    
+}
+
+.main__title{
+    margin: 0 0 1.5rem 0;
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+    text-align: center;
+}
+
+.main__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__text{
+    margin: 0 0 3rem 0;
+}
+
+.main__img{
+    margin: 0 0 2rem 0;
+}
+
+.main__wrap-del-and-pay{
+    margin: 0 0 2.5rem 0;
+}
+
+.main__info-buy{
+    font-size: 1.3rem;
+}
+
+.main__info-delivery{
+    font-size: 1.3rem;
+}
+
+.main__info-pay{
+    font-size: 1.3rem;
+}
+
+.main__info-method-expulsion{
+    font-size: 1.3rem;
+}
+
+.main__wrap-inner{
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+}
+
+.main__text-price{
+    font-size: 2rem;
+}
+
+.main__sum{
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-weight: 700;
+}
+
+.main__currency{
+    font-size: 2rem;
 }
