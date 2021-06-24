@@ -4,12 +4,72 @@
     line-height: 2.1rem;
     color: #ffffff;
     text-align: center;
-    text-transform: uppercase;
-    background-color: #55A5B9;
+    background-color:#1caace; //#55A5B9
+    border: none;
+    transition: all 0.3s ease 0s;
+
+    &:hover{
+        background-color: #49C246;
+        transition: all 0.3s ease 0s;
+    }
 
     &--link{
         display: block;
         border-radius: 5rem;
+        text-transform: uppercase;
+        cursor: pointer; //for IOS event click
+
+        @media(min-width: $tablet-width){
+            font-size: 2rem;
+            line-height: 2.3rem;
+        }
+
+        @media(min-width: $desktop-width-2){
+            margin: 0 0 0 0;
+            font-size: 2.2rem;
+            line-height: 2.4rem;
+        }  
     }
-    
+
+    &--sumbit{
+        display: inline-block;
+        width: 100%;
+        border-radius: 0.5rem;
+        line-height: 2.1rem;
+        cursor: pointer;
+
+        @media(min-width:$mobile){
+            display: inline-block;
+            width: auto;
+            padding: 1.4rem 6rem;
+        }
+
+        @media(min-width: $tablet-width){
+            padding: 1rem 6.1rem;
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+        }
+
+        @media(min-width: $desktop-width-2){
+            padding: 1rem 8.5rem;
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+        } 
+    }
+
+    &--question{
+        @media(min-width:$mobile){
+            width: 100%;
+            padding: 1.4rem 6rem;
+        }
+    }
+
+    &--order-confirm {
+        display: inline-block;
+        width: 100%;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
 }
+
+
