@@ -1,22 +1,49 @@
 .main{
-    flex: 0 1 100%;
-    padding: 3rem 1rem 3.5rem 1rem;
+    flex: 1 0 auto;
+}
+
+.main__wrap{ 
+    padding: 3rem 1rem;
+    background-color: rgba($color: $main-background, $alpha: $main-background-alpha);
 
     @media(min-width:$mobile){
         padding: 5rem 2rem 3rem 2rem;
     }
+
+    @media(min-width: $tablet-width){
+        padding: 5.5rem 8.4rem 3rem 8.4rem;
+    }
+
+   @media(min-width: $desktop-width-1){ 
+        padding: calc(5.2rem + 5.5rem ) 0 5rem 0;
+        //На этом медиазапросе main-header делается фиксированым, 
+        //высота header = 5.5rem(55px) по этому к 
+        //значению padding-top добавляем  высоту header*/
+    }
+
+    @media(min-width: $desktop-width-2){
+        padding: calc(5.5rem + 5.5rem + 4.6rem) 0 6rem 0; 
+        //к padding-top добавляем + 4.6rem это компенсирует
+        //отрицательный margin-bottom в блоке  .main__title (согл. макету "Frame 1366")
+         
+    }
+
+    @media(min-width: $desktop-width-3){
+        padding: calc(15rem + 7.5rem ) 0; 
+        //На этом медиазапросе высота main-header = 7.5rem(75px) по этому к 
+        //значению padding-top добавляем  высоту header*/
+    }
 }
 
-.main__wrap{
-    padding: 3rem 1rem 3.5rem 1rem;
-    margin: -3rem -1rem 0 -1rem;
-    background-color: rgba($color: $main-background, $alpha: $main-background-alpha);
-
-    @media(min-width:$mobile){
-        padding: 5rem 2rem 0 2rem;
-        margin: -5rem -2rem  0 -2rem;
+.main__box{
+    @media(min-width: $desktop-width-1){
+       width: 102rem;
+       margin: 0 auto;
     }
-    
+
+    @media(min-width: $desktop-width-2){
+        width: 128.7rem;
+    }
 }
 
 .main__title{
@@ -29,8 +56,17 @@
         margin: 0 0 3rem 0;
     }
 
-    @media(min-width:$mobile){
-        margin: 0 0 3rem 0;
+    @media(min-width: $desktop-width-1){
+        width: 47.4rem;
+        margin: 0 0 -3.5rem auto;
+        text-align: left;
+    }
+
+    @media(min-width: $desktop-width-2){
+        width: 60rem;
+        margin: 0 0 -9.7rem auto;
+        font-size: 4.2rem;
+        line-height: 4.9rem;
     }
 }
 
@@ -38,20 +74,85 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media(min-width: $desktop-width-1){
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
 }
 
 .main__text{
     margin: 0 0 3rem 0;
+    
+    @media(min-width: $tablet-width){
+        margin: 0 0 1rem 0;
+    }
 
+    @media(min-width: $desktop-width-1){
+        flex: 0 1 47.4rem;
+        order: 2;
+        margin: 4.9rem 0 0 0;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    @media(min-width: $desktop-width-2){
+        flex: 0 1 60rem;
+        margin: 13.5rem 0 0 0;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }  
 }
 
-.main__img{
+.main__wrap-img{
     margin: 0 0 2rem 0;
-
+   
     @media(min-width:$mobile){
        width: 44.1rem;
        height: 38.3rem;
     }
+
+    @media(min-width: $tablet-width){
+        width: 60rem;
+        height: 60.6rem;
+        margin: 0 0 3rem 0;
+    }
+
+    @media(min-width: $desktop-width-1){
+        position: relative;
+        width: 47.7rem;
+        height: 47.7rem;
+        order: 1;
+        margin: 0;
+    }
+
+    @media(min-width: $desktop-width-2){
+        width: 60rem;
+        height: 60rem;
+    }
+
+    &::before{
+        @media(min-width: $desktop-width-1){
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -3.3rem;
+            width: 0.1rem;
+            height: 100%;
+            background-color: #C4C4C4;
+        }
+
+        @media(min-width: $desktop-width-1){
+            right: -4.5rem;
+        }
+    }
+}
+
+.main__img{ //Убрать после добавление соответствующей картинки
+    width: 100%;
+    height: 100%;
 }
 
 .main__wrap-info{
@@ -59,16 +160,66 @@
         display: flex;
         flex-wrap: wrap;
     }
-    
+
+    @media(min-width: $tablet-width){
+        justify-content: flex-end;
+    }
+
+    @media(min-width: $desktop-width-1){
+        position: relative;
+        width: 47.4rem;
+        order: 3;
+        margin: -18.3rem 0 0 auto;
+        flex-wrap: nowrap;
+    }
+
+    @media(min-width: $desktop-width-2){
+        width: 60rem;
+        margin: -22.8rem 0 0 auto;
+    }
 }
 
-.main__wrap-del-and-pay{
+.main__wrap-del-and-pay{ 
     margin: 0 0 2.5rem 0;
 
     @media(min-width:$mobile){
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
+      margin: 0;
+    }
+
+    @media(min-width: $tablet-width){
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    @media(min-width: $desktop-width-1){
+        flex: 0 1 50%;
+        order: 2;
+        padding: 0 0 0 2rem;  
+    }
+
+    @media(min-width: $desktop-width-2){
+        padding: 0 0 0  2.9rem;
+    }
+
+    &::before{
+        @media(min-width: $tablet-width){
+            content: "";
+            position: absolute;
+            top: 0.3rem;
+            right: calc(100% / 2);
+            width: 0.1rem;
+            height: 100%;
+            background-color: #C4C4C4;
+        }
+
+        @media(min-width: $desktop-width-1){
+            left: 0;
+        }
     }
 }
 
@@ -81,16 +232,28 @@
 }
 
 .main__info-buy{
+    margin: 0 0 1rem 0; 
     font-size: 1.3rem;
+    line-height: 1.4rem;
 
     @media(min-width:$mobile){
        flex: 1 1 100%;
        margin: 0 0 1.2rem 0; 
        line-height: 1.4rem;
-       //border: 1px solid red;
+    }
+
+    @media(min-width: $tablet-width){
+        flex: 0 1 50.1%;
+        margin: 0 0 0.5rem 0;
+        padding: 0 4.9rem 0 0; 
+    }
+
+    @media(min-width: $desktop-width-1){
+        flex: 0 1 auto;
+        padding: 0; 
     }
 }
-/******/
+
 .main__info-delivery{
     font-size: 1.3rem;
 
@@ -98,7 +261,14 @@
         flex: 0 1 50.1%;
         padding: 0 0 0 1.6rem;
         line-height: 1.4rem;
-        //border: 1px solid red;
+    }
+
+    @media(min-width: $tablet-width){
+      padding: 0;
+    }
+
+    @media(min-width: $desktop-width-1){
+        flex: 0 1 auto;
     }
 }
 
@@ -109,7 +279,20 @@
         flex: 0 1 50.1%;
         padding: 0 0 0 1.6rem;
         line-height: 1.4rem;
-        //border: 1px solid red;
+    }
+
+    @media(min-width: $tablet-width){
+        padding: 0;
+    }
+
+    @media(min-width: $desktop-width-1){
+        flex: 0 1 auto;
+    }
+}
+
+.main__info-pay br:last-child{
+    @media(min-width: $tablet-width){
+        display: none;
     }
 }
 
@@ -120,24 +303,48 @@
         flex: 0 1 50.1%;
         padding: 0 0 0 1.6rem;
         line-height: 1.4rem;
-        //border: 1px solid red;
+    }
+
+    @media(min-width: $tablet-width){
+        padding: 0;
+    }
+
+    @media(min-width: $desktop-width-1){
+        flex: 0 1 auto;
     }
 }
-/*******/
 
 .main__margin:not(:last-child){
     @media(min-width:$mobile){
         margin: 0 0 0.5rem 0;
     }
+
+    @media(min-width: $desktop-width-1){
+        margin: 0 0 0.6rem 0;
+    }
 }
 
 
-.main__wrap-price{
+.main__wrap-price{ 
     @media(min-width:$mobile){
         position: relative;
         flex: 0 1 calc(49.9% - 1.6rem);
-        margin: -13.4rem 0 0 0; 
-        //border: 1px solid red;
+        margin: -10.8rem 0 0 0; 
+    }
+
+    @media(min-width: $tablet-width){
+        flex: 0 1 calc(49.9% - 5rem);
+        margin: -14rem 0 0 0;
+    }
+
+    @media(min-width: $desktop-width-1){
+        flex: 0 1 50%;
+        margin: 2rem 0 0 0;
+        padding: 0 2rem 0 0;
+    }
+
+    @media(min-width: $desktop-width-2){
+        padding: 0 2.9rem 0 0;
     }
 
     &::before{
@@ -150,26 +357,47 @@
             height: 10.5rem;
             background-color: #C4C4C4;
         }
-    }
 
+        @media(min-width: $tablet-width){
+           display: none;
+        }
+    }
 }
 
 .main__wrap-inner{
     margin: 0 0 1.5rem 0;
     text-align: center;
     
+    @media(min-width: $desktop-width-2){
+        margin: 0 0 4.8rem 0;
+    }
 }
 
 .main__text-price{
     font-size: 2rem;
+
+    @media(min-width: $tablet-width){
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+    }
 }
 
 .main__sum{
     font-size: 2.4rem;
     line-height: 2.8rem;
     font-weight: 700;
+
+    @media(min-width: $tablet-width){
+        font-size: 3.6rem;
+        line-height: 4.2rem;
+    }
 }
 
 .main__currency{
     font-size: 2rem;
+
+    @media(min-width: $tablet-width){
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+    }
 }
