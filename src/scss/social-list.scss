@@ -2,30 +2,42 @@
     @include list-style-reset;
     display: flex;
 
-    @media(min-width:$desktop-width-1){
-        display: none;
+    &--header{
+        @media(max-width:$mobile-width-only){
+            width: 11.8rem;
+            height: 3.8rem;
+            margin: 0 0 2.6rem 0;
+            padding: 0.4rem 0.3rem;
+            border-radius: 2rem;
+            background-color: #DBDBDB;
+        }
+    
+        @media(min-width:$desktop-width-1){
+            display: none;
+        }
     }
-}
 
-.social-list--header{
-    @media(max-width:$mobile-width-only){
-        width: 11.8rem;
-        height: 3.8rem;
-        margin: 0 0 2.6rem 0;
-        padding: 0.4rem 0.3rem;
-        border-radius: 2rem;
-        background-color: #DBDBDB;
-    }
+    &--footer{
+        justify-content: center;
+        margin: 0 0 2rem 0;
 
-    @media(min-width:$desktop-width-1){
-        display: none;
+        @media(min-width: $tablet-width){
+            margin: 0 0 3rem 0;
+        }
+        
+        @media(min-width: $desktop-width-1){ 
+            margin: 0 0 3.5rem 0;
+        }
+        
     }
 }
 
 .social-list__item:not(:last-child){
-    @media(max-width:$mobile-width-only){
-        margin: 0 1.1rem 0 0;
-    }   
+    margin: 0 1.1rem 0 0;  
+
+    @media(min-width:$desktop-width-1){
+        margin: 0 2.2rem 0 0;  
+    }
 }
 
 .social-list__phone{
@@ -39,6 +51,8 @@
         display: none;
     }
 }
+
+
 
 
 
