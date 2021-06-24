@@ -1,5 +1,5 @@
 
-/*=================== START STYLE ONLY MOBLILE =====================*/
+//=================== START STYLE ONLY MOBLILE =====================
 
 @media(max-width:$mobile-width-only){
     .burger--open{
@@ -61,7 +61,6 @@
         }
     }
 
-
     .burger__line{
         position: absolute;
         top: 0;
@@ -69,12 +68,11 @@
         bottom: 0;
         right: 0;
         display: block;
-        width: 3rem;
+        width: 100%; //3rem
         height: 0.3rem;
         margin: auto;
         background-color: #474747;
-        border-radius: 0.3rem;
-       
+        border-radius: 0.3rem;  
     }
 
     .burger__line.js-burger__line--active{
@@ -103,7 +101,7 @@
     }
 
 }
-/*>>>>>>>>>>>>>>>>>>>>>>>>> END <<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+//>>>>>>>>>>>>>>>>>>>>>>>>> END <<<<<<<<<<<<<<<<<<<<<<<<<<</
 
 .burger{
     @media(min-width:$desktop-width-1){
