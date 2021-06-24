@@ -15,8 +15,8 @@ html{
     font-size: 62.5%;
 }
 
-
 body{
+   position: relative;
    display: flex;
    flex-direction: column;
    min-width: 32rem;
@@ -25,9 +25,8 @@ body{
    font-size: 1.8rem;
    font-style: normal;
    line-height: 2.4rem;
-   color: #20343E;  
+   color: #20343E; 
 }
-
 
 .visually-hidden {
     position: absolute;
@@ -45,5 +44,4 @@ body{
 .js-lock-scroll{
     overflow: hidden;
 }
-
 
