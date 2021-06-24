@@ -2,11 +2,12 @@
 .main-header{
     background-color: #ffffff;
     @media(max-width:$mobile-width-only){
-        position: relative;
+        position: relative;  
     } 
 
     @media(min-width:$desktop-width-1){
         position: fixed;
+        z-index: 100;
         width: 100%;
         padding: 0 2rem 0 0;
     }
@@ -34,55 +35,29 @@
         padding: 9rem 0 0 2.5rem;
         border-radius:0 2rem 2rem 0;
         background-color: #ffffff;
-        overflow: scroll;
+        overflow: hidden;
         transition: all 0.8s ease 0s;
     }
 
     @media(min-width:$desktop-width-1){
         display:flex;
         align-items: center;
+        max-width: 65rem;
+    }
+
+    @media(min-width:$desktop-width-1){
+        max-width: 85rem; 
     }
 }
 
 .main-header__nav.js-main-header__nav--active{
+   
     @media(max-width:$mobile-width-only){
-        z-index: 100;
+        z-index: 1200;
         left: 0;
         transition: all 0.8s ease 0s;
+        overflow: auto;
     }
-}
-
-.menu-list{
-    @include list-style-reset;
-
-    @media(max-width:$mobile-width-only){
-        margin: 0 0 2.6rem 0;
-    }
-
-    @media(min-width:$desktop-width-1){
-        display:flex;
-    }
-}
-
-.menu-list__item:not(:last-child){
-    @media(max-width:$mobile-width-only){
-        margin: 0 0 1.5rem 0;
-    }
-
-    @media(min-width:$desktop-width-1){
-        margin: 0 2rem 0 0;
-    }
-}
-
-.menu-list__link{
-    font-size: 1.6rem;
-    line-height: 1.8rem;
-    color: #20343E;
-/*
-    @media(min-width:$desktop-width-3){
-        font-size: 1.8rem;
-        line-height: 2rem;
-    }*/
 }
 
 .main-header_wrap-icon{
