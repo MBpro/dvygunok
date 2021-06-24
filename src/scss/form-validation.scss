@@ -1,0 +1,13 @@
+
+.validate:focus{
+    outline: none;
+    border: 0.1rem solid #A5A5A5;
+}
+
+.validate:valid{
+    border: 0.2rem solid #49C246;
+}
+
+.validate:invalid:not(:focus):not(:placeholder-shown){
+    border: 0.2rem solid orange;
+}
