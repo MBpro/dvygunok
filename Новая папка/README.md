@@ -1,2 +1,0 @@
-# dvygunok
-Shopping Landing Page
